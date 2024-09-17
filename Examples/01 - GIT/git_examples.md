@@ -1,13 +1,15 @@
-# Esempi GIT
+# Git Examples 
 
-Dopo aver creato il repository su gitHub:
 
-1. Cloniamo il reporitory in un cartella locale
+After the creation of a repository on GitHub:
+
+1. Clone the repository in a local folder
+
 ```console
 $ git clone
 ```
 
-2. Aggiungiamo un nuovo file, *tes.txt*, nella cartella locale e poi pubblichiamolo nel repository remoto
+2. Add a new file, *tes.txt*, in the local folder then publish it in the remote repository:
 
 ```console
 $ touch tes.txt
@@ -16,7 +18,7 @@ $ git commit -m "First Commit"
 $ git push
 ```
 
-3. Creiamo una ramificazione del repository chiamata ***testing*** a cui aggiungiamo un nuovo file chiamato test2.txt:
+3. Create a branch of the repository called ***testing*** and add a new file called test2.txt to it:
 
 ```console
 $ git branch testing
@@ -27,7 +29,7 @@ $ git commit -m "Second Commit"
 $ git push --set-upstream origin testing
 ```
 
-4. Ritorniamo al repository principale ed aggiungiamo il file test3.txt
+4. Go back to the main repository and add the test3.txt file
 
 ```console
 $ git switch main
@@ -37,7 +39,7 @@ $ git commit -m "Third Commit"
 $ git push
 ```
 
-5. Aggiorniamo il file test.txt sulla branch *testing*
+5. Update the test.txt file on the *testing* branch
 
 ```console
 $ git switch testing
@@ -48,7 +50,7 @@ $ git push
 $ git log --oneline --graph
 ```
 
-6. Torniamo nella *branch* **main**. e fondiamo questa con la branch ***testing***, dopo di che aggiungiamo un file *test5.txt* e visualizziamo il graficio.
+6. Let's go back to the *branch* **main**. and merge it with the branch ***testing***, after which we add a file *test5.txt* and display the graph.
 
 ```console
 $ git switch main
