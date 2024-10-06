@@ -1,0 +1,63 @@
+advancedConfiguration:
+  deadPixels:
+    run: yes
+    file: $ROOT/calib/jui_jan_dead_map_v0.1.dat
+    size: (2000,1504)
+    mask: -1200
+    desc: "Dead Pixels"
+    type: bool
+    func: mask
+  badPixels:
+    run: yes
+    file: $ROOT/calib/jui_jan_bad_map_v0.1.dat
+    size: (2000, 1504)
+    mask: -1100
+    type: bool
+    func: mask
+    desc: "Bad Pixels"
+  saturPixels:
+    run: yes
+    file: $ROOT/calib/jui_jan_sat_map_v0.1.dat
+    size: (2000, 1504)
+    mask: -1000
+    desc: "Saturated Pixels"
+    type: float64
+    func: threshold
+  darkCorrection:
+    run: yes
+    file: $ROOT/calib/jui_jan_dark_coef_v0.1.dat
+    size: (2,2000,1504)
+    mask: 0
+    desc: "Dark Correction"
+    func: linearMult
+    type: float32
+  fpnCorrection:
+    run: yes
+    file: $ROOT/calib/jui_jan_fpn_v0.1.dat
+    size: (2000,1504)
+    mask: 0
+    desc: "Offset Correction"
+    type: float32
+    func: subtraction
+  radCorrection:
+    run: yes
+    file: 
+      1: $ROOT/calib/jui_jan_rad_f1_v0.1.dat
+      2: $ROOT/calib/jui_jan_rad_f2_v0.1.dat
+      3: $ROOT/calib/jui_jan_rad_f3_v0.1.dat
+      4: $ROOT/calib/jui_jan_rad_f4_v0.1.dat
+      5: $ROOT/calib/jui_jan_rad_f5_v0.1.dat
+      6: $ROOT/calib/jui_jan_rad_f6_v0.1.dat
+      7: $ROOT/calib/jui_jan_rad_f7_v0.1.dat
+      8: $ROOT/calib/jui_jan_rad_f8_v0.1.dat
+      9: $ROOT/calib/jui_jan_rad_f9_v0.1.dat
+      10: $ROOT/calib/jui_jan_rad_f10_v0.1.dat
+      11: $ROOT/calib/jui_jan_rad_f11_v0.1.dat
+      12: $ROOT/calib/jui_jan_rad_f12_v0.1.dat
+      13: $ROOT/calib/jui_jan_rad_f13_v0.1.dat
+    size: (3, 2000, 1504)
+    mask: 0
+    desc: "Radiometric Calibration"
+    type: float64
+    func: quad
+

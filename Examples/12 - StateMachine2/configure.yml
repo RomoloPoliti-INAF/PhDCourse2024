@@ -1,0 +1,3 @@
+logFile: StateMachine.log
+commandTable: commands.yml
+cmdHistory: history.csv
