@@ -1,1 +1,4 @@
-10/29/2023 10:31:59 PM | ERROR    | StateMachine | newState3  | interact             | The command NST35 is not a valid command
+10/09/2024 11:21:19 AM | INFO     | StateMachine | newState2  | interact             | TM(1,1)
+10/09/2024 11:21:19 AM | INFO     | StateMachine | newState2  | interact             | Executing NSS00001: Boot Command
+10/09/2024 11:21:35 AM | INFO     | StateMachine | newState2  | interact             | TM(1,1)
+10/09/2024 11:21:35 AM | INFO     | StateMachine | newState2  | interact             | Executing NSS00002: Shuting Down Command

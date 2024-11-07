@@ -1,0 +1,5 @@
+TC,Destination,IntitialState,TransientState,FinalState,Descrption
+NSS00001,ME,OFF,BUSY,IDLE,ME Switch on
+NSS00002,ME,IDLE,BUSY,OFF,ME Switch off
+NSS00003,PE,OFF,BUSY,IDLE,PE Switch on
+NSS00004,PE,IDLE,BUSY,IDLE,PE Image acquire

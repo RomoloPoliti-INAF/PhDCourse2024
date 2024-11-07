@@ -1,0 +1,14 @@
+{% include 'myapp2/_base.html' %}
+{% block content %}
+<h1 class="text-center">{{ main }}</h1>
+<form action="{{ action }}" method="post">
+{% csrf_token %}
+<fieldset>
+    {{ formset }}
+
+</fieldset>
+<input type="submit" role="button" class="btn btn-primary" value="{{ label }}">
+<a href="{% url 'add' %}" role="button" class="btn btn-danger">Reset</a>
+<a href="{% url 'plist' %}" role="button" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

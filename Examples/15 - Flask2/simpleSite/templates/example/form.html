@@ -1,0 +1,61 @@
+{% extends 'example/_base.html' %}
+{% block content %}
+<h1 class="text-center">{{ cont.main }}</h1>
+<form action="{{ cont.action }}" method="post">
+
+
+<fieldset>
+    <div class="row mb-3 align-bottom">
+    <div class="col">
+        
+        <input type="text" class="form-control {% if cont.error['name'] %}is-invalid{% endif %}" 
+            placeholder="First Name" aria-label="First Name"
+            value="{{ request.form['name'] or cont.original['name'] }}" name="name">
+    </div>
+    <div class="col">
+        
+        <input type="text" class="form-control {% if cont.error['surname'] %}is-invalid{% endif %}" placeholder="Family Name" aria-label="Family Name"" 
+            value="{{ request.form['surname'] or cont.original['surname']  }}" name="surname">
+    </div>  
+</div>
+    <div>
+        <div class="mb-3">
+            <input type="email" class="form-control {% if cont.error['email'] %}is-invalid{% endif %}" 
+                placeholder="Email" aria-label="email" 
+                value="{{ request.form['email'] or cont.original['email'] }}" name="email">
+        </div>
+        <div class="mb-3">    
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
+                placeholder="Note" aria-label="Note"
+                name="text">{{ request.form['text'] or cont.original['text']  }}</textarea>
+        </div>
+        <div class="mb-3">
+            <select class="form-select {% if cont.error['lavoro'] %}is-invalid{% endif %}" 
+                aria-label="Default select example" name="lavoro" id='lavoro' >
+                
+                {% if request.form['lavoro'] %}
+                    {% set sel=request.form['lavoro']| int %}
+                {% elif cont.original['lavoro_id'] %}
+                    {% set sel=cont.original['lavoro_id']| int %}
+                {% else %}
+                    {% set sel=0 %} 
+                {% endif %}
+                <option {% if sel == 0 %} selected {% endif %}>Seleziona un lavoro</option>
+                {% for lItem in cont.lavori %}
+                    <option value="{{ lItem.id }}" {% if sel == lItem.id %} selected {% endif %}>{{ lItem.lavoro }}</option>
+                {% endfor %}
+            </select>
+        <div>
+    </div>
+    <div class="mb-3">
+        {% for item in cont.error %}
+            <p style="color:red;"> {{ cont.error[item] }}</p>
+        {% endfor %}
+        </div>
+
+</fieldset>
+<input type="submit" role="button" class="btn btn-primary" value="{{ cont.label }}">
+<a href="{{ url_for('example.add') }}" role="button" class="btn btn-danger">Reset</a>
+<a href="{{ url_for('example.plist') }}" role="button" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

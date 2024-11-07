@@ -1,0 +1,26 @@
+{% extends 'example/_base.html' %}
+{% block content %}
+<h1 class="text-center">Aggiunta Lavori</h1>
+<table class="table">
+    <thead>
+        <tr><th>Lavori</th></tr>
+    </thead>
+    <tbody>
+        {% for item in context.data %}
+            <tr><td>{{ item.lavoro }}</td></tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+<form action="/lavori" method="post">
+    <div class="mb-3">
+        <input type="text" class="form-control {% if not context.error=='' %}is-invalid{% endif %}" 
+            placeholder="Nuovo lavoro" aria-label="Nuovo lavoro"
+            name="nLavoro">
+        <span style='color:red;'>{{ context.error }}</span>
+    </div>
+    <div class="mb-3">
+        <input type="submit" role="button" class="btn btn-primary" value="Aggiungi">
+    </div>
+</form>
+{% endblock %}

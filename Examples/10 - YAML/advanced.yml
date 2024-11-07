@@ -60,4 +60,9 @@ advancedConfiguration:
     desc: "Radiometric Calibration"
     type: float64
     func: quad
+test:
+  - alpha
+  - beta
+  - gamma
+
 

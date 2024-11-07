@@ -1,0 +1,27 @@
+<div class="row mb-3 align-bottom">
+    <div class="col">
+        <span style="color:red;">{{ form.name.errors }}</span>
+        <input type="text" class="form-control" placeholder="{{ form.name.label }}" aria-label="{{ form.name.label }}"
+        value="{{ form.name.value| default:'' }}" name="{{ form.name.html_name }}">
+    </div>
+    <div class="col">
+        <span style="color:red;">{{ form.surname.errors }}</span>
+        <input type="text" class="form-control" placeholder="{{ form.surname.label }}" aria-label="{{ form.surname.label }}" 
+            value="{{ form.surname.value| default:'' }}" name="{{ form.surname.html_name }}">
+    </div>  
+</div>
+    <div>
+        <div class="mb-3">
+            <span style="color:red;">{{ form.email.errors }}</span>
+            {{ form.email }}
+        </div>
+        <div class="mb-3">
+            <span style="color:red;">{{ form.text.errors }}</span>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
+            placeholder="{{ form.text.label }}" aria-label="{{ form.text.label }}"
+             name="{{ form.text.html_name }}">{{ form.text.value| default:'' }}</textarea>
+        </div>
+        <div class="mb-3">
+            {{ form.lavoro }}
+        <div>
+    </div>

@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "menuitem": [
+            {
+                "type": "Main Course",
+                "value": "Ribs"
+            },
+            {
+                "type": "side",
+                "value": "franch fries"
+            }
+        ]
+    }
+}

@@ -1,0 +1,43 @@
+[
+        {
+            "model": "myapp2.Lavoro",
+            "pk": 1,
+            "fields": {
+                "lavoro": "Attore"
+            }
+        },
+    {
+        "model": "myapp2.example",
+        "pk": 1,
+        "fields": {
+            "name": "Pippo",
+            "surname": "Baudo",
+            "email": "pippo.baudo@gmail.com",
+            "text": "Test",
+            "lavoro": 1
+        }
+    },
+    {
+        "model": "myapp2.example",
+        "pk": 2,
+        "fields": {
+            "name": "bruno",
+            "surname": "vespa",
+            "email": "bruno.vespa@gmail.com",
+            "text": "questa è una nota",
+            "lavoro": 1
+        }
+    },
+    {
+        "model": "myapp2.example",
+        "pk": 11,
+        "fields": {
+            "name": "Emilio",
+            "surname": "Solfrizzi",
+            "email": "emilio.solfrizzi@gmail.com",
+            "text": "test",
+            "lavoro": 1
+        }
+    }
+
+]
